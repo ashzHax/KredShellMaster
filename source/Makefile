@@ -1,31 +1,22 @@
-# Makefile
 # by : ashz
-# reason : EXECUTION CODE FOR COMPILING SOURCE CODE
+# reason : To compile shell code that I already don't like coding
 
-# default variables
-TARGET = KredShellMaster
-COMPILER = gcc
-INCLUDE = -I.
-OUTPUT = -o
-COMPILE = -c
-HEADER = ./utility/color_unix.h
-.DEFAULT_GOAL := $(TARGET)
-
-# external library
-UTILITY = ./utility/
-
-# objects
-OBJECT += $(TARGET).o
+RESULT=ksm
+COMPILER=gcc
+OPTION_OUTPUT= -o
+OPTION_GENERATE= -c
 
 %.o: %.c
-	$(COMPILER) $(COMPILE) $(OUTPUT) $@ $< $(INCLUDE) 
+	$(COMPILER) $(OPTION_GENERATE) $(OPTION_OUTPUT) $@ $< 
 
-$(TARGET): $(TARGET).o
-	$(COMPILER) $(OUTPUT) $(TARGET) $(OBJECT)
+.DEFAULT_GOAL := $(RESULT)
+$(RESULT): main.o
+	$(COMPILER) $(OPTION_OUTPUT) $@ $<
+	rm -f *.o
+	
+clean:
+	rm -f ksm
 	rm -f *.o
 
-clean:
-	rm -f KredShellMaster
-	
-
 .PHONY: clean
+

@@ -3,7 +3,18 @@
 
 #include "utility/color_unix.h"
 
-int main(){
+#include "display.c"
+
+int main(int argc, char **argv){
+	
+	int err = display_init();
+	if(err<0){ 
+		printf(RED"error"RESET" > init fail, code %d\n",err);	
+		return 0;
+	}
+
+		
+/*
 	char out[100];
 	getcwd(out,100);
 	printf("%s\n",out);
@@ -15,6 +26,7 @@ int main(){
 	printf(RED"HI"BLUE "HELLO" RESET);
 	
 	alarm(3);
+	*/
 	return 0;
 }
 
