@@ -4,16 +4,39 @@
 #include "utility/color_unix.h"
 
 #include "display.c"
+#include "io_controil.c"
+
+char **get_input(){
+
+}
+
+int display_input(){
+	
+
+
+	return 0;
+}
 
 int main(int argc, char **argv){
-	
+
 	int err = display_init();
 	if(err<0){ 
 		printf(RED"error"RESET" > init fail, code %d\n",err);	
-		return 0;
+		return err;
+	}
+		
+	while(1){
+		err = display_input();
+		if(err<0){
+			printf(RED"error"RESET" > display fail, code %d\n",err);	
+			return err;
+		}
+		
+		get_input();
+	
+		
 	}
 
-		
 /*
 	char out[100];
 	getcwd(out,100);
