@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#include "utility/color_unix.h"
+#include "setting.h"
 
+#include "utility/color_unix.h"
 #include "display.c"
-#include "io_controil.c"
+//#include "io_control.c"
 
 char **get_input(){
 
@@ -19,23 +20,23 @@ int display_input(){
 
 int main(int argc, char **argv){
 
-	int err = display_init();
+	dp_init();
+	/*
 	if(err<0){ 
 		printf(RED"error"RESET" > init fail, code %d\n",err);	
 		return err;
 	}
-		
+	*/	
+	char buf[MAX_CHAR_LEN_USERNAME];
 	while(1){
-		err = display_input();
-		if(err<0){
-			printf(RED"error"RESET" > display fail, code %d\n",err);	
-			return err;
-		}
-		
+		dp_cwd();
 		get_input();
-	
-		
-	}
+		printf("\n");
+		getlogin_r(buf,MAX_CHAR_LEN_USERNAME);
+		printf("%s\n%s",buf,gethostid());
+		printf("\n");
+		break;
+	}	
 
 /*
 	char out[100];

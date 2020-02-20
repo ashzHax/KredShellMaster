@@ -1,17 +1,46 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <string.h>
 
-int display_init()
+#include "setting.h"
+
+// dp = display
+
+void dp_init()
 {
 	printf("[================================================]\n");
-	printf("	By : "MAGENTA"ashz"RESET"\n");
-	printf("	Reason : personal custom shell\n\n");	
-	printf("        db   dD d8888b. d88888b d8888b. .d8888. db   db d88888b db      db      .88b  d88.  .d8b.  .d8888. d888888b d88888b d8888b.\n");
-	printf("	88 ,8P' 88  `8D 88'     88  `8D 88'  YP 88   88 88'     88      88      88'YbdP`88 d8' `8b 88'  YP    88    88'     88  `8D\n");
-	printf("	88,8P   88oobY' 88ooooo 88   88 `8bo.   88ooo88 88ooooo 88      88      88  88  88 88ooo88 `8bo.      88    88ooooo 88oobY'\n");
-	printf("	88`8b   88`8b   88      88   88   `Y8b. 88   88 88      88      88      88  88  88 88   88   `Y8b.    88    88      88`8b  \n");
-	printf("	88 `88. 88 `88. 88.     88  .8D db   8D 88   88 88.     88booo. 88booo. 88  88  88 88   88 db   8D    88    88.     88 `88.\n");
-	printf("	YP   YD 88   YD Y88888P Y8888D' `8888Y' YP   YP Y88888P Y88888P Y88888P YP  YP  YP YP   YP `8888Y'    YP    Y88888P 88   YD\n");
+	printf("\n");
+	printf("    By     : "MAGENTA"ashz"RESET"\n");
+	printf("    Reason : "YELLOW"personal custom shell"RESET"\n");
+	printf("\n");
+	printf("    "BLUE"db   dD"RESET" d8888b. d88888b d8888b.\n");
+	printf("    "BLUE"88 ,8P'"RESET" 88  `8D 88'     88  `8D\n");
+	printf("    "BLUE"88,8P  "RESET" 88oobY' 88ooooo 88   88\n");
+	printf("    "BLUE"88`8b  "RESET" 88`8b   88      88   88\n");
+	printf("    "BLUE"88 `88."RESET" 88 `88. 88.     88  .8D\n");
+	printf("    "BLUE"YP   YD"RESET" 88   YD Y88888P Y8888D'\n");
+	printf("\n");
+	printf("    "MAGENTA".d8888."RESET" db   db d88888b db      db     \n");
+	printf("    "MAGENTA"88'  YP"RESET" 88   88 88'     88      88     \n");
+	printf("    "MAGENTA"`8bo.  "RESET" 88ooo88 88ooooo 88      88     \n");
+	printf("    "MAGENTA"  `Y8b."RESET" 88   88 88      88      88     \n");
+	printf("    "MAGENTA"db   8D"RESET" 88   88 88.     88booo. 88booo.\n");
+	printf("    "MAGENTA"`8888Y'"RESET" YP   YP Y88888P Y88888P Y88888P\n");
+	printf("\n");
+	printf("    "RED".88b  d88."RESET"  .d8b.  .d8888. d888888b d88888b d8888b. \n");
+	printf("    "RED"88'YbdP`88"RESET" d8' `8b 88'  YP    88    88'     88  `8D\n");
+	printf("    "RED"88  88  88"RESET" 88ooo88 `8bo.      88    88ooooo 88oobY'\n");
+	printf("    "RED"88  88  88"RESET" 88   88   `Y8b.    88    88      88`8b  \n");
+	printf("    "RED"88  88  88"RESET" 88   88 db   8D    88    88.     88 `88.\n");
+	printf("    "RED"YP  YP  YP"RESET" YP   YP `8888Y'    YP    Y88888P 88   YD\n");
+	printf("\n");
 	printf("[================================================]\n");
-	return 0;
+	printf("\n");
+	return;
+}
+
+void dp_cwd()
+{
+	printf("%s",getcwd(NULL,MAX_CHAR_LEN_DIR));
+	
 }
