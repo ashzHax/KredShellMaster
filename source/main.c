@@ -27,13 +27,13 @@ int main(int argc, char **argv){
 		return err;
 	}
 	*/	
-	char buf[MAX_CHAR_LEN_USERNAME];
+	//char buf[MAX_CHAR_LEN_USERNAME];
 	while(1){
 		dp_cwd();
 		get_input();
 		printf("\n");
-		getlogin_r(buf,MAX_CHAR_LEN_USERNAME);
-		printf("%s\n%s",buf,gethostid());
+		//getlogin_r(buf,MAX_CHAR_LEN_USERNAME);
+		printf("%s\n",getlogin());
 		printf("\n");
 		break;
 	}	

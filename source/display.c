@@ -8,7 +8,7 @@
 
 void dp_init()
 {
-	printf("[================================================]\n");
+	printf("[=================================================================]\n");
 	printf("\n");
 	printf("    By     : "MAGENTA"ashz"RESET"\n");
 	printf("    Reason : "YELLOW"personal custom shell"RESET"\n");
@@ -34,7 +34,7 @@ void dp_init()
 	printf("    "RED"88  88  88"RESET" 88   88 db   8D    88    88.     88 `88.\n");
 	printf("    "RED"YP  YP  YP"RESET" YP   YP `8888Y'    YP    Y88888P 88   YD\n");
 	printf("\n");
-	printf("[================================================]\n");
+	printf("[=================================================================]\n");
 	printf("\n");
 	return;
 }
