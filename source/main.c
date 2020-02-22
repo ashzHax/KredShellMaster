@@ -1,56 +1,65 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 #include "setting.h"
 
 #include "utility/color_unix.h"
+#include "logging/log.c"
 #include "display.c"
+
+#include <readline/readline.h>
+#include <readline/history.h>
+
+#define STOP_CMD 0
+#define NORMAL 1
+#define OUT_ONLY 2
+
 //#include "io_control.c"
 
-char **get_input(){
-
-}
-
-int display_input(){
+void in_get(char *str)
+{
+	char *input = readline(" ");
 	
-
-
-	return 0;
+	add_history(input);
+	strcpy(str,input);
+	free(input);
+	
+	return;
 }
 
-int main(int argc, char **argv){
+int in_chk(char *str) 
+{
+	if(strcmp(str,"exit")==0) return STOP_CMD;
+	else return OUT_ONLY;
+}
+
+int main(int argc, char **argv)
+{
+	char *cmd_str = (char*)malloc(sizeof(char)*MAX_STR_LEN_CMD);
+	int ret_val;
 
 	dp_init();
-	/*
-	if(err<0){ 
-		printf(RED"error"RESET" > init fail, code %d\n",err);	
-		return err;
-	}
-	*/	
-	//char buf[MAX_CHAR_LEN_USERNAME];
-	while(1){
+	
+	while(1)
+	{	
 		dp_cwd();
-		get_input();
-		printf("\n");
-		//getlogin_r(buf,MAX_CHAR_LEN_USERNAME);
-		printf("%s\n",getlogin());
-		printf("\n");
-		break;
+		
+		in_get(cmd_str);
+	
+		ret_val = in_chk(cmd_str);
+		
+		if(ret_val == STOP_CMD) {
+			break;
+		}
+		else if(ret_val == NORMAL) {
+
+		}
+		else if(ret_val == OUT_ONLY) {
+			printf("\n    "WHITE"%s\n",cmd_str);
+		}
 	}	
-
-/*
-	char out[100];
-	getcwd(out,100);
-	printf("%s\n",out);
-
-	chdir("/home/ashz/");
-	getcwd(out,100);
-	printf("\033[0;31m%s\033[0m\n",out);
 	
-	printf(RED"HI"BLUE "HELLO" RESET);
-	
-	alarm(3);
-	*/
 	return 0;
 }
 

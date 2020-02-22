@@ -10,8 +10,9 @@ void dp_init()
 {
 	printf("[=================================================================]\n");
 	printf("\n");
-	printf("    By     : "MAGENTA"ashz"RESET"\n");
-	printf("    Reason : "YELLOW"personal custom shell"RESET"\n");
+	printf("    By      : "MAGENTA"ashz"RESET"\n");
+	printf("    Version : "GREEN"%0.1f"RESET"\n",KSM_VERSION);
+	printf("    Reason  : "YELLOW"personal custom shell"RESET"\n");
 	printf("\n");
 	printf("    "BLUE"db   dD"RESET" d8888b. d88888b d8888b.\n");
 	printf("    "BLUE"88 ,8P'"RESET" 88  `8D 88'     88  `8D\n");
@@ -41,6 +42,6 @@ void dp_init()
 
 void dp_cwd()
 {
-	printf("%s",getcwd(NULL,MAX_CHAR_LEN_DIR));
-	
+	printf(RESET"\n"BOLD_WHITE"["MAGENTA"%s"BOLD_WHITE"]"RESET" %s" ,getlogin(),getcwd(NULL,MAX_STR_LEN_DIR));
+	printf(RESET"\n"BOLD_WHITE"[-"RED"."BOLD_WHITE"-"BOLD_WHITE"]"RESET);
 }
