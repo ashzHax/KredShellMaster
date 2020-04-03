@@ -19,6 +19,11 @@
 
 //#include "io_control.c"
 
+/*
+https://stackoverflow.com/questions/4217037/catch-ctrl-c-in-c/4217052*
+ *
+ * */
+
 void  INThandler(int sig)
 {
     char  c;
