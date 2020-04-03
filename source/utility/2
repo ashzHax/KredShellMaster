@@ -1,13 +1,12 @@
 // C
 /*
 	by : ashz
-	purpose : text formatting
+	reason : text color formatting
 	
 	reference site : https://stackoverflow.com/questions/3585846/color-text-in-terminal-applications-in-unix
 	reference site : http://web.theurbanpenguin.com/adding-color-to-your-output-from-c
 
-    example : clear();
-    example : printf(RED"RED I AM "BLUE"BLUE I AM "RESET);
+	example : printf(RED"RED I AM "BLUE"BLUE I AM "RESET);
 */
 
 #define clear() printf("\033[H\033[J") 

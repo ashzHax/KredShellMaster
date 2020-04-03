@@ -1,0 +1,55 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+.DEFAULT_GOAL	source/Makefile	/^.DEFAULT_GOAL := $(RESULT)$/;"	m
+BLUE	source/utility/color_unix.h	24;"	d
+BOLD_BLACK	source/utility/color_unix.h	37;"	d
+BOLD_BLUE	source/utility/color_unix.h	41;"	d
+BOLD_CYAN	source/utility/color_unix.h	43;"	d
+BOLD_GREEN	source/utility/color_unix.h	39;"	d
+BOLD_MAGENTA	source/utility/color_unix.h	42;"	d
+BOLD_RED	source/utility/color_unix.h	38;"	d
+BOLD_WHITE	source/utility/color_unix.h	44;"	d
+BOLD_YELLOW	source/utility/color_unix.h	40;"	d
+COMPILER	source/Makefile	/^COMPILER=gcc$/;"	m
+CYAN	source/utility/color_unix.h	26;"	d
+DARK_BLUE	source/utility/color_unix.h	17;"	d
+DARK_CYAN	source/utility/color_unix.h	19;"	d
+DARK_GREEN	source/utility/color_unix.h	15;"	d
+DARK_MAGENTA	source/utility/color_unix.h	18;"	d
+DARK_RED	source/utility/color_unix.h	14;"	d
+DARK_YELLOW	source/utility/color_unix.h	16;"	d
+DEB	source/logging/log.c	/^	DEB,ERR,INF$/;"	e	enum:__LOG_TYPE__	file:
+ERR	source/logging/log.c	/^	DEB,ERR,INF$/;"	e	enum:__LOG_TYPE__	file:
+GREEN	source/utility/color_unix.h	22;"	d
+INF	source/logging/log.c	/^	DEB,ERR,INF$/;"	e	enum:__LOG_TYPE__	file:
+KSM_VERSION	source/setting.h	4;"	d
+LOG_TYPE	source/logging/log.c	/^}LOG_TYPE;$/;"	t	typeref:enum:__LOG_TYPE__	file:
+MAGENTA	source/utility/color_unix.h	25;"	d
+MAX_STR_LEN_CMD	source/setting.h	6;"	d
+MAX_STR_LEN_DIR	source/setting.h	7;"	d
+MAX_STR_LEN_USERNAME	source/setting.h	8;"	d
+NORMAL	source/main.c	15;"	d	file:
+OPTION_EX_LIB	source/Makefile	/^OPTION_EX_LIB= -lreadline$/;"	m
+OPTION_GENERATE	source/Makefile	/^OPTION_GENERATE= -c$/;"	m
+OPTION_OUTPUT	source/Makefile	/^OPTION_OUTPUT= -o$/;"	m
+OUT_ONLY	source/main.c	16;"	d	file:
+RED	source/utility/color_unix.h	21;"	d
+RESET	source/utility/color_unix.h	47;"	d
+RESULT	source/Makefile	/^RESULT=ksm$/;"	m
+SETTING_H	source/setting.h	2;"	d
+STOP_CMD	source/main.c	14;"	d	file:
+WHITE	source/utility/color_unix.h	46;"	d
+YELLOW	source/utility/color_unix.h	23;"	d
+__LOG_TYPE__	source/logging/log.c	/^typedef enum __LOG_TYPE__{$/;"	g	file:
+clear	source/utility/color_unix.h	12;"	d
+dp_cwd	source/display.c	/^void dp_cwd()$/;"	f
+dp_init	source/display.c	/^void dp_init()$/;"	f
+in_chk	source/main.c	/^int in_chk(char *str) $/;"	f
+in_get	source/main.c	/^void in_get(char *str)$/;"	f
+main	source/main.c	/^int main(int argc, char **argv)$/;"	f
+shlog	source/logging/log.c	/^void shlog(LOG_TYPE type, const char* detail, ...)$/;"	f
+system_init_level	source/system_level.c	/^void system_init_level()$/;"	f

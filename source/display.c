@@ -42,6 +42,6 @@ void dp_init()
 
 void dp_cwd()
 {
-	printf(RESET"\n"BOLD_WHITE"["MAGENTA"%s"BOLD_WHITE"]"RESET" %s" ,getlogin(),getcwd(NULL,MAX_STR_LEN_DIR));
-	printf(RESET"\n"BOLD_WHITE"[-"RED"."BOLD_WHITE"-"BOLD_WHITE"]"RESET);
+	printf(RESET"\n"BOLD_WHITE"["RED"%s"BOLD_WHITE"]"RESET" %s" ,getlogin(),getcwd(NULL,MAX_STR_LEN_DIR));
+	printf(RESET"\n"BOLD_WHITE"[-"BOLD_WHITE"."BOLD_WHITE"-"BOLD_WHITE"]"RESET);
 }
