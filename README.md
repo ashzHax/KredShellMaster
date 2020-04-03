@@ -1,2 +1,5 @@
 # KredShellMaster
-Personal Shell (CLI)
+custom UNIX shell, that just looks nice.
+
+# Language
+C
