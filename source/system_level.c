@@ -24,7 +24,7 @@ void system_init_level()
 
     system_level = fopen("./profile/level.ksm","w+");
     
-1    // get file
+    // get file
 	// get level
 	// get etc whatever
 	// start in main, initiation section
