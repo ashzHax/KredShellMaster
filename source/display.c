@@ -42,6 +42,9 @@ void dp_init()
 
 void dp_cwd()
 {
-	printf(RESET"\n"BOLD_WHITE"["RED"%s"BOLD_WHITE"]"RESET" %s" ,getlogin(),getcwd(NULL,MAX_STR_LEN_DIR));
+	printf(RESET"\n"BOLD_WHITE"["RED"%s"BOLD_WHITE"]",getlogin()); 
+    printf(BOLD_WHITE"["BOLD_GREEN"LV"BOLD_WHITE"."BOLD_YELLOW"%d"BOLD_WHITE"]",system_level_get_level());
+    printf(BOLD_WHITE"["BOLD_BLUE"%d"BOLD_WHITE"/"BOLD_MAGENTA"%d"BOLD_WHITE"]",system_level_get_exp(),system_level_get_max_exp());
+    printf(RESET" %s" ,getcwd(NULL,MAX_STR_LEN_DIR));
 	printf(RESET"\n"BOLD_WHITE"[-"BOLD_WHITE"."BOLD_WHITE"-"BOLD_WHITE"]"RESET);
 }

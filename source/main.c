@@ -68,6 +68,7 @@ int main(int argc, char **argv)
 	int ret_val;
 
 	//dp_init();
+    //system_level_init();
 
     clear();
 

@@ -16,9 +16,8 @@ struct __system_USER_DATA__ {
 
 } system_USER_DATA;
 
-void system_init_level()
+void system_level_init()
 {
-
     system_LEVEL = 0;
     system_EXP = 0;
 
@@ -37,6 +36,19 @@ void system_level_add(size_t cmd_len)
         
 }
 
+int system_level_get_level()
+{
+    return 1;
 
 
+}
 
+int system_level_get_exp()
+{
+    return 0;
+}
+
+int system_level_get_max_exp()
+{
+    return 1000;
+}
