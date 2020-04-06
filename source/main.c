@@ -62,13 +62,19 @@ int in_chk(char *str)
 #endif
 }
 
+void end_program()
+{
+	//deinit
+	exit(0);
+}
+
 int main(int argc, char **argv)
 {
 	char *cmd_str = (char*)malloc(sizeof(char)*MAX_STR_LEN_CMD);
 	int ret_val;
 
 	//dp_init();
-    //system_level_init();
+    system_level_init();
 
     clear();
 
@@ -79,15 +85,23 @@ int main(int argc, char **argv)
 		in_get(cmd_str);
 	
 		ret_val = in_chk(cmd_str);
-		
-		if(ret_val == STOP_CMD) {
-			break;
-		}
-		else if(ret_val == NORMAL) {
-            system(cmd_str);
-		}
-		else if(ret_val == OUT_ONLY) {
-			printf("\n    "WHITE"%s\n",cmd_str);
+	
+		switch(ret_val)
+		{
+			case STOP_CMD: 
+			{
+				end_program();
+			}		
+			case NORMAL:
+			{
+            	system(cmd_str);
+				break;
+			}
+			case OUT_ONLY:
+			{
+				printf("\n    "WHITE"%s\n",cmd_str);
+				break;
+			}
 		}
 	}	
 	
