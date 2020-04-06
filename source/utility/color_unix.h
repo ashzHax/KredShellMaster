@@ -50,3 +50,6 @@
 #define WHITE   "\x1B[37m"
 #define RESET   "\x1B[0m"
 
+// study code
+#define bgred "\033[031m"
+
