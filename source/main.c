@@ -16,6 +16,7 @@
 #define STOP_CMD 0
 #define NORMAL 1
 #define OUT_ONLY 2
+#define CHANGE_DIR 3
 
 //#include "io_control.c"
 
@@ -55,6 +56,10 @@ void in_get(char *str)
 int in_chk(char *str) 
 {
 	if(strcmp(str,"exit")==0) return STOP_CMD;
+    else if(strcmp(str,"cd")==0) {
+        // only check if the START of the string is CD
+        return CHANGE_DIR;
+    }
 #if COMMAND_DEBUG
     else return OUT_ONLY;
 #else   
@@ -102,6 +107,11 @@ int main(int argc, char **argv)
 				printf("\n    "WHITE"%s\n",cmd_str);
 				break;
 			}
+            case CHANGE_DIR:
+            {
+                chdir(cmd_str+3);
+                break;
+            }
 		}
 	}	
 	

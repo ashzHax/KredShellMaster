@@ -46,5 +46,5 @@ void dp_cwd()
     printf(BOLD_WHITE"["BOLD_GREEN"LV"BOLD_WHITE"."BOLD_YELLOW"%d"BOLD_WHITE"]",system_level_get_level());
     printf(BOLD_WHITE"["BOLD_BLUE"%d"BOLD_WHITE"/"BOLD_MAGENTA"%d"BOLD_WHITE"]",system_level_get_exp(),system_level_get_max_exp());
     printf(RESET" %s" ,getcwd(NULL,MAX_STR_LEN_DIR));
-	printf(RESET"\n"BOLD_WHITE"[-"BOLD_WHITE"."BOLD_WHITE"-"BOLD_WHITE"]"RESET);
+	printf(RESET"\n"BOLD_WHITE"[0"BOLD_WHITE"x"BOLD_WHITE"0"BOLD_WHITE"]"RESET);
 }
